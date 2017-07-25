@@ -113,6 +113,7 @@ You should see something like what appears in the figure below. </br></br>
   3. Once the installation completes click **Next** and leave the check box **Launch Microsoft Azure Storage Explorer** checked.  
   4. Log in to Azure.
   5. Verify that you can see the storage account that you configured for Azure Diagnostics.  
+
 ![Storage accounts](./media/security-azure-log-integration-get-started/storage-account.jpg) </br></br>
    6. Notice that there are a few options under storage accounts. One of them is **Tables**. Under **Tables** you should see one called **WADWindowsEventLogsTable**. </br></br>
    ![Storage accounts](./media/security-azure-log-integration-get-started/storage-explorer.png) </br>
@@ -149,6 +150,9 @@ If you would like the subscription ID to show up in the event XML, append the su
 
 >[!NOTE]  
 Wait up to 60 minutes, then view the events that are pulled from the storage account. To view, open **Event Viewer > Windows Logs > Forwarded Events** on the Azlog Integrator.
+
+This solution collects logs in the Windows Forwarded Event channel, which you can see in the Event Viewer on the Azure Log Integration machine. You will need to install and configure WinCollect to integrate events from the forwarded Event Channel to QRadar.
+For information on forwarding data from Microsoft Windows to IBM QRadar, refer to QRadar’s documentation at http://public.dhe.ibm.com/software/security/products/qradar/documents/iTeam_addendum/b_wincollect.pdf
 
 Here you can see a video going over the steps covered above.
 > [!VIDEO https://channel9.msdn.com/Blogs/Azure-Security-Videos/Azure-Log-Integration-Videos-Enable-Diagnostics-and-Storage/player]
