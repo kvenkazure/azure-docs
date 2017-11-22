@@ -82,6 +82,10 @@ The event publisher is only aware of its partition key, not the partition to whi
 
 Event Hubs uses *Shared Access Signatures*, which are available at the namespace and event hub level. A SAS token is generated from a SAS key and is an SHA hash of a URL, encoded in a specific format. Using the name of the key (policy) and the token, Event Hubs can regenerate the hash and thus authenticate the sender. Normally, SAS tokens for event publishers are created with only **send** privileges on a specific event hub. This SAS token URL mechanism is the basis for publisher identification introduced in the publisher policy. For more information about working with SAS, see [Shared Access Signature Authentication with Service Bus](../service-bus-messaging/service-bus-sas.md).
 
+## Encrytion at Rest
+
+Event Hubs encrypt the data at rest. Refe the document for details - https://docs.microsoft.com/en-us/azure/security/azure-security-encryption-atrest
+
 ## Event consumers
 
 Any entity that reads event data from an event hub is an *event consumer*. All Event Hubs consumers connect via the AMQP 1.0 session and events are delivered through the session as they become available. The client does not need to poll for data availability.
