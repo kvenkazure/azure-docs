@@ -128,7 +128,26 @@ When necessary, you can delete a recommended rule. For example, you may determin
 
    ![delete rule](./media/security-center-adaptive-network-hardening/delete-hard-rule.png)
 
+Port Descriptions.
 
+Port	Description 
+22	SSH
+3389	RDP
+21	FTP
+23	Telnet
+445	TCP port 445 is used for direct TCP/IP MS Networking access without the need for a NetBIOS layer.
+4333	4333	Used by mini-sql server (both TCP ,UDP)
+3306	Used by MySQL
+1433	Default port for sql server
+1434	SQL Server Browser service
+53	53 is used for domain transfer
+20	File Transfer Protocol (FTP) 
+5985	WBEM WS-Management HTTP, registered 2006-1
+5986	WBEM WS-Management HTTP over TLS/SSL, registered 2006-11
+5432	ARD 2.0 Database, PostgreSQL Database.
+139	NetBIOS is a protocol used for File and Print Sharing under all current versions of Windows. While this in itself is not a problem, the way that the protocol is implemented can be.
+66	Oracle SQL*NET
+1128	SAPHostControl over SOAP/HTTP
 
 
 
